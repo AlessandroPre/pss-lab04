@@ -7,27 +7,37 @@ public class Smartlamp{
     private static final String[] COLOR = {"white","red","green", "blue"};
     
     private int intensity;
-    private boolean LampOn;
+    private boolean lampOn;
+    private String color;
 
     public Smartlamp(){
-        this.LampOn = false;
+        this.lampOn = false;
         this.intensity = 0;
+        this.color = COLOR[0];
     }
 
     public void switchOn(){
-        this.LampOn = true;
+        this.lampOn = true;
     }
 
     public void SwitchOff(){
-        this.LampOn = false;
+        this.lampOn = false;
     }
 
     private void checkIntensity(){
-        
+        if(this.intensity < 0){
+            intensity = 0;
+        }
+        else if (this.intensity > LEVELS) {
+            this.intensity = LEVELS;
+        }
     }
 
     public void setIntensity(final int val){
         this.intensity = val-DELTA;
+        this.checkIntensity();
     }
+
+    public void setColor(int col){}
 
 }
