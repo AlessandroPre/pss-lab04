@@ -47,4 +47,9 @@ public class Smartlamp{
         else this.color = COLOR[0];
     }
 
+    public static void main(final String[] args) {
+        Smartlamp lamp = new Smartlamp();
+        lamp.setColor("Blue");
+        lamp.setIntensity(2);
+    }
 }
