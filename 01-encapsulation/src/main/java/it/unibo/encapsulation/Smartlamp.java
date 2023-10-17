@@ -14,12 +14,20 @@ public class Smartlamp{
         this.intensity = 0;
     }
 
-    public void SwitchOn(){
+    public void switchOn(){
         this.LampOn = true;
     }
 
     public void SwitchOff(){
         this.LampOn = false;
+    }
+
+    private void checkIntensity(){
+        
+    }
+
+    public void setIntensity(final int val){
+        this.intensity = val-DELTA;
     }
 
 }
