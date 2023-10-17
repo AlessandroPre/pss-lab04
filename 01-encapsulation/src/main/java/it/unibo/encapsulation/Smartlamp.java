@@ -14,4 +14,12 @@ public class Smartlamp{
         this.intensity = 0;
     }
 
+    public void SwitchOn(){
+        this.LampOn = true;
+    }
+
+    public void SwitchOff(){
+        this.LampOn = false;
+    }
+
 }
