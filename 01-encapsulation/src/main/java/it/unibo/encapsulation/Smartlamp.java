@@ -1,5 +1,7 @@
 package it.unibo.encapsulation;
 
+import java.util.Arrays;
+
 public class Smartlamp{
 
     private static final int LEVELS = 3;
@@ -38,6 +40,11 @@ public class Smartlamp{
         this.checkIntensity();
     }
 
-    public void setColor(int col){}
+    public void setColor(String col){
+        if(Arrays.asList(COLOR).contains(col)){
+            this.color = col;
+        }
+        else this.color = COLOR[0];
+    }
 
 }
