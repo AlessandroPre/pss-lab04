@@ -6,18 +6,17 @@ public class Smartlamp{
 
     private static final int LEVELS = 3;
     private static final int DELTA = 1;
-    private static final String[] COLOR = {"white","red","green", "blue"};
+    private static final String[] COLOUR = {"white","red","green", "blue"};
     
     private int intensity;
     private boolean lampOn;
-    private String color;
+    private String colour;
 
     public Smartlamp(){
         this.lampOn = false;
         this.intensity = 0;
-        this.color = COLOR[0];
+        this.colour = COLOUR[0];
     }
-
 
     public void switchOnOff(){
         if(this.lampOn){
@@ -41,11 +40,16 @@ public class Smartlamp{
 
     public void setColor(String col){
         if(Arrays.asList(COLOR).contains(col)){
-            this.color = col;
+            this.colour = col;
         }
-        else this.color = COLOR[0];
+        else this.colour = COLOUR[0];
     }
 
+    public void printLampInfo(){
+        System.out.println("Status: "+ lampOn);
+        System.out.println("Intensity: "+ intensity);
+        System.out.println("Colour: "+ colour);
+    }
     public static void main(final String[] args) {
         Smartlamp lamp = new Smartlamp();
         lamp.setColor("Blue");
