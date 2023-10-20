@@ -18,12 +18,11 @@ public class Smartlamp{
         this.color = COLOR[0];
     }
 
-    public void switchOn(){
-        this.lampOn = true;
-    }
 
-    public void SwitchOff(){
-        this.lampOn = false;
+    public void switchOnOff(){
+        if(this.lampOn){
+            this.lampOn = !this.lampOn;
+        }
     }
 
     private void checkIntensity(){
