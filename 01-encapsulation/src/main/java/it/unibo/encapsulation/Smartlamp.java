@@ -50,9 +50,4 @@ public class Smartlamp{
         System.out.println("Intensity: "+ intensity);
         System.out.println("Colour: "+ colour);
     }
-    public static void main(final String[] args) {
-        Smartlamp lamp = new Smartlamp();
-        lamp.setColor("Blue");
-        lamp.setIntensity(2);
-    }
 }
