@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Smartlamp{
 
     private static final int LEVELS = 3;
-    private static final int DELTA = 1;
+    //private static final int DELTA = 1;
     private static final String[] COLOUR = {"white","red","green", "blue"};
     
     private int intensity;
@@ -19,14 +19,12 @@ public class Smartlamp{
     }
 
     public void switchOnOff(){
-        if(this.lampOn){
             this.lampOn = !this.lampOn;
-        }
     }
 
     private void checkIntensity(){
         if(this.intensity < 0){
-            intensity = 0;
+            this.intensity = 0;
         }
         else if (this.intensity > LEVELS) {
             this.intensity = LEVELS;
@@ -34,20 +32,29 @@ public class Smartlamp{
     }
 
     public void setIntensity(final int val){
-        this.intensity = val-DELTA;
+        this.intensity = val;
         this.checkIntensity();
     }
 
     public void setColor(String col){
-        if(Arrays.asList(COLOR).contains(col)){
+        if(Arrays.asList(COLOUR).contains(col)){
             this.colour = col;
         }
         else this.colour = COLOUR[0];
     }
 
-    public void printLampInfo(){
-        System.out.println("Status: "+ lampOn);
-        System.out.println("Intensity: "+ intensity);
-        System.out.println("Colour: "+ colour);
+    public void getStatus(){
+        if(this.lampOn == true) System.out.println("The lamp is on");
+        else System.out.println("The lamp is off");
     }
+
+    public int getIntensity(){
+        return this.intensity;
+    }
+    
+    public String getColour(){
+        return this.colour;
+    }
+
+
 }

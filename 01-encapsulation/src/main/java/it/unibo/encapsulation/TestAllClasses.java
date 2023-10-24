@@ -16,5 +16,25 @@ public class TestAllClasses {
         final Smartphone note3 = new Smartphone(4, 2048, 8192, "Samsung", "Galaxy Note 3", true, true, true);
         htcOne.printStringRep();
         note3.printStringRep();
+
+
+
+        Smartlamp lamp = new Smartlamp();
+        lamp.switchOnOff();
+        lamp.setColor("green");
+        lamp.setIntensity(2);
+        //System.out.println("Lamp is: "+ lamp.getStatus());
+        lamp.getStatus();
+        System.out.println(lamp.getColour());
+        System.out.println(lamp.getIntensity());
+        lamp.setIntensity(5);
+        System.out.println(lamp.getIntensity());
+        lamp.setIntensity(1);
+        System.out.println(lamp.getIntensity());
+        //lamp.printLampInfo();
+        lamp.switchOnOff();
+        lamp.getStatus();
+        //System.out.println("Lamp is: " + lamp.getStatus());
+        //lamp.printLampInfo();
     }
 }
